@@ -1,0 +1,2 @@
+;; quickrun
+(autoload 'quickrun "quickrun")

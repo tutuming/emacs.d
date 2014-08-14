@@ -1,0 +1,35 @@
+;; ja fonts
+(setenv "LANG" "ja_JP.UTF-8")
+(setq cjk-char-width-table-list
+      '((ja_JP nil (japanese-jisx0213.2004-1 (#x2121 . #x2D7E))
+               (japanese-jisx0212 (#x2121 . #x2F7E))
+               (cp932-2-byte (#x8140 . #x879F)))
+        (zh_CN nil (chinese-gb2312 (#x2121 . #x297E)))
+        (zh_HK nil (big5-hkscs (#xA140 . #xA3FE) (#xC6A0 . #xC8FE)))
+        (zh_TW nil (big5 (#xA140 . #xA3FE))
+               (chinese-cns11643-1 (#x2121 . #x427E)))
+        (ko_KR nil (korean-ksc5601 (#x2121 . #x2C7E)))
+        (CJK   nil (japanese-jisx0213.2004-1 (#x2121 . #x2D7E))
+               (japanese-jisx0212 (#x2121 . #x2F7E))
+               (cp932-2-byte (#x8140 . #x879F))
+               (chinese-gb2312 (#x2121 . #x297E))
+               (big5-hkscs (#xA140 . #xA3FE) (#xC6A0 . #xC8FE))
+               (big5 (#xA140 . #xA3FE))
+               (chinese-cns11643-1 (#x2121 . #x427E))
+               (korean-ksc5601 (#x2121 . #x2C7E)))
+        (none  nil)))
+(use-cjk-char-width-table 'ja_JP)
+
+;; coding
+(require 'ucs-normalize)
+
+;; 日本語表示の設定
+(set-language-environment 'Japanese)
+(setq default-buffer-file-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8-unix)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-clipboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
+(setq file-name-coding-system 'utf-8-hfs)
