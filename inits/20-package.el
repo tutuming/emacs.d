@@ -29,7 +29,10 @@
     go-eldoc
     go-errcheck
     motion-mode
+    markdown-mode
     thrift
+    js2-mode
+    quickrun
     ;; moccur-edit ;; site-lispに置いてある、自動でとりたい
     ))
 
