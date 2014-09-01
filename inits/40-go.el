@@ -18,11 +18,11 @@
 (require 'go-eldoc)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
 
-(add-to-list 'load-path (concat (getenv "GOPATH")  "/src/github.com/golang/lint/misc/emacs"))
+(add-to-list 'load-path "~/go-packages/src/github.com/golang/lint/misc/emacs")
 (require 'golint)
 
-(load "$GOPATH/src/code.google.com/p/go.tools/cmd/oracle/oracle.el")
+(load "~/go-packages/src/code.google.com/p/go.tools/cmd/oracle/oracle.el")
 (add-hook 'go-mode-hook 'go-oracle-mode)
 
-(add-to-list 'load-path "~/src/github.com/dougm/goflymake")
+(add-to-list 'load-path "~/go-packages/src/github.com/dougm/goflymake")
 (require 'go-flymake)
