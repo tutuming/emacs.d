@@ -30,13 +30,13 @@
          'mule-unicode-0100-24ff
          '("Hiragino Kaku Gothic ProN" . "iso10646-1"))
         (setq face-font-rescale-alist
-              '(("^-apple-hiragino.*" . 1.2)
+              '(("^-apple-hiragino.*" . 1.3)
                 (".*osaka-bold.*" . 1.2)
                 (".*osaka-medium.*" . 1.2)
                 (".*courier-bold-.*-mac-roman" . 1.0)
                 (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
                 (".*monaco-bold-.*-mac-roman" . 0.9)
-                ("-cdac$" . 1.3))))
+                ("-cdac$" . 1.2))))
       )
 
   )

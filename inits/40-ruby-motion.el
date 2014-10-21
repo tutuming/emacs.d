@@ -17,3 +17,5 @@
     (shell-command (format "open dash://%s" keyword))))
 
 (define-key global-map (kbd "C-c C-d") 'dash-at-point)
+
+(add-to-list 'ac-modes 'motion-mode)

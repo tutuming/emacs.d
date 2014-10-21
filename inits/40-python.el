@@ -1,5 +1,5 @@
+(require 'python-mode)
 
-(autoload 'python-mode "python-mode" "Python editing mode." t)
 ;;pymacs
 (autoload 'pymacs-apply "pymacs")
 (autoload 'pymacs-call "pymacs")

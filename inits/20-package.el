@@ -21,6 +21,7 @@
     wgrep
     wdired
     expand-region
+
     flymake
     flymake-coffee
     yaml-mode
@@ -32,7 +33,9 @@
     markdown-mode
     thrift
     js2-mode
+    jsx-mode
     quickrun
+    python-mode
     ;; moccur-edit ;; site-lispに置いてある、自動でとりたい
     ))
 

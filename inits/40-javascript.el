@@ -1,8 +1,9 @@
 ;; espresso-mode (used with js2-mode bellow)
-(autoload 'espresso-mode "espresso")
+(require 'espresso)
 
 ;; js2-mode
-(autoload 'js2-mode "js2" nil t)
+(require 'js2-mode)
+
 (add-to-list 'auto-mode-alist '("\\.js$" .  js2-mode))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -1,5 +1,5 @@
 ;; coffee script
-(autoload 'coffee-mode "coffee-mode")
+(require 'coffee-mode)
 
 (defun coffee-custom ()
   "coffee-mode-hook"
@@ -15,3 +15,5 @@
 (add-hook 'coffee-mode-hook 'flymake-coffee-load)
 (setq flymake-coffee-coffeelint-configuration-file
       (expand-file-name "/Users/tutuming/.coffeelint-config.json"))
+
+(add-to-list 'ac-modes 'coffee-mode)

@@ -49,3 +49,6 @@
 
 ;; region選択中にキー入力で上書き
 (delete-selection-mode t)
+
+;; 新しいウィンドウ開かない
+(setq ns-pop-up-frames nil)
