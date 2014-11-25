@@ -1,0 +1,3 @@
+[submodule "emacs-sourcegraph-mode"]
+	path = emacs-sourcegraph-mode
+	url = https://github.com/sourcegraph/emacs-sourcegraph-mode.git

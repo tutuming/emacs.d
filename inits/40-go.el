@@ -1,4 +1,7 @@
 ;; go mode
+
+(setq exec-path (append exec-path '("/Users/tutuming/go-packages/bin")))
+
 (require 'go-mode)
 (require 'go-autocomplete)
 
@@ -29,3 +32,7 @@
 
 (add-to-list 'load-path "~/go-packages/src/github.com/dougm/goflymake")
 (require 'go-flymake)
+
+;; sourcegraph
+(add-to-list 'load-path "~/.emacs.d/emacs-sourcegraph-mode")
+(require 'sourcegraph)

@@ -1,3 +1,21 @@
+;; PATH
+(defun set-exec-path-from-shell-PATH ()
+  (let ((path-from-shell (replace-regexp-in-string
+                          "[ \t\n]*$"
+                          ""
+                          (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq exec-path (split-string path-from-shell path-separator))))
+
+(when (and window-system (eq system-type 'darwin))
+  ;; When started from Emacs.app or similar, ensure $PATH
+  ;; is the same the user would see in Terminal.app
+  (set-exec-path-from-shell-PATH))
+
+
+;; 幅が高くなっても自動で横分割しない
+(setq split-height-threshold nil)
+
 ;; 履歴保存数
 (setq recentf-max-saved-items 500)
 (recentf-mode 1)
@@ -52,3 +70,6 @@
 
 ;; 新しいウィンドウ開かない
 (setq ns-pop-up-frames nil)
+
+;; emacsclient
+(server-start)

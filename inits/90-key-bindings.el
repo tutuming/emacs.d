@@ -15,3 +15,5 @@
 (global-set-key (kbd "C-;") 'auto-complete) ;;補完
 
 (global-set-key (kbd "C-c C-x") 'eval-and-replace)
+
+(global-set-key (kbd "C-c C-i") 'helm-imenu)
