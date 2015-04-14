@@ -17,13 +17,16 @@
     helm-git-files
     sublime-themes
     multiple-cursors
-    color-moccur
-    wgrep
-    wdired
     expand-region
-
+    ag
+    wgrep
+    wgrep-ag
+    scss-mode
     flymake
     flymake-coffee
+    flycheck
+    flycheck-pos-tip
+    coffee-mode
     yaml-mode
     go-mode
     go-autocomplete

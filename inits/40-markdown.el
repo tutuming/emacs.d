@@ -9,5 +9,5 @@
       (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
 
 (custom-set-variables
-  '(markdown-command "open -a Marked")
+  '(markdown-command "open -a Marked\ 2")
   '(markdown-command-needs-filename t))

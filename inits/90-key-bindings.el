@@ -1,9 +1,12 @@
 ;; key bindings
+(define-key global-map (kbd "C-c C-l") 'goto-line)
 (define-key global-map (kbd "C-c a") 'align-regexp)
-(define-key global-map (kbd "C-c C-g") 'moccur-grep-find)
+(define-key global-map (kbd "C-c C-g") 'ag)
 (define-key global-map (kbd "C-c C-q") 'quickrun)
 (define-key global-map (kbd "C-c o") 'open-current-dir-with-finder)
-(define-key global-map (kbd "C-\\") 'flymake-goto-next-error)
+;;(define-key global-map (kbd "C-\\") 'flymake-goto-next-error)
+(define-key global-map (kbd "C-\\") 'flycheck-next-error)
+
 (global-unset-key "\C-t")
 (put 'set-goal-column 'disabled nil)
 

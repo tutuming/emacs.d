@@ -2,6 +2,9 @@
 (require 'helm-config)
 (require 'helm-git-files)
 (define-key global-map (kbd "C-x C-b") 'helm-for-files)
+
+(define-key global-map (kbd "C-x C-y") 'helm-show-kill-ring)
+
 (setq helm-for-files-preferred-list
       '(helm-git-files:all-source
         helm-source-buffers-list

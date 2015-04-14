@@ -1,8 +1,10 @@
+(set-background-color "black")
+
 (if window-system
     (progn
       (setq initial-frame-alist
             '((top . 1) (left . 1) (width . 200) (height . 60)))
-      (set-background-color "black")
+
       (set-frame-parameter nil 'alpha 95)
       (setq-default line-spacing 3)
       (setq mac-allow-anti-aliasing t)
@@ -38,5 +40,4 @@
                 (".*monaco-bold-.*-mac-roman" . 0.9)
                 ("-cdac$" . 1.2))))
       )
-
   )

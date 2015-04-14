@@ -10,10 +10,10 @@
 (add-hook 'coffee-mode-hook
   '(lambda() (coffee-custom)))
 
-;; coffee flymake
-(require 'flymake-coffee)
-(add-hook 'coffee-mode-hook 'flymake-coffee-load)
-(setq flymake-coffee-coffeelint-configuration-file
-      (expand-file-name "/Users/tutuming/.coffeelint-config.json"))
+;; coffee flycheck
+(add-hook 'coffee-mode-hook
+          `(lambda ()
+             (setq flycheck-checker 'coffee)
+             (flycheck-mode 1)))
 
 (add-to-list 'ac-modes 'coffee-mode)
