@@ -22,15 +22,20 @@
 
 (add-hook 'before-save-hook 'gofmt-before-save)
 
-;; (require 'go-eldoc)
-;; (add-hook 'go-mode-hook 'go-eldoc-setup)
+(require 'go-eldoc)
+(add-hook 'go-mode-hook 'go-eldoc-setup)
 
 (add-to-list 'load-path "~/go-packages/src/github.com/golang/lint/misc/emacs")
 (require 'golint)
 
-(load "~/go-packages/src/golang.org/x/tools/cmd/oracle/oracle.el")
-(add-hook 'go-mode-hook 'go-oracle-mode)
+// (load "~/go-packages/src/golang.org/x/tools/cmd/oracle/oracle.el")
+// (add-hook 'go-mode-hook 'go-oracle-mode)
 
 (add-to-list 'load-path "~/go-packages/src/github.com/dougm/goflymake")
 (require 'go-flycheck)
 (add-to-list 'flycheck-checkers 'go-vet)
+
+;; err ハイライト
+(font-lock-add-keywords
+ 'go-mode
+ '(("\\b\\(err\\)\\b" 1 '((:foreground "LightSalmon2") (:weight bold)) t)))

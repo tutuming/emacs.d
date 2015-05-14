@@ -9,6 +9,7 @@
 (defvar installing-package-list
   '(
     ;; ここに使っているパッケージを書く。
+    magit
     smartrep
     auto-complete
     flymake
@@ -27,6 +28,10 @@
     flycheck
     flycheck-pos-tip
     coffee-mode
+    json-mode
+    log4e
+    yaxception
+    tss
     yaml-mode
     go-mode
     go-autocomplete

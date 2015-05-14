@@ -14,6 +14,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ag-highlight-search t)
+ '(ag-reuse-buffers (quote nil))
+ '(ag-reuse-window (quote nil))
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(custom-safe-themes
@@ -21,13 +24,16 @@
     ("68769179097d800e415631967544f8b2001dae07972939446e21438b1010748c" default)))
  '(gud-gdb-command-name "gdb --annotate=1")
  '(js2-basic-offset 2)
+ '(js2-basic-offsetsstrict-tra 2)
  '(js2-cleanup-whitespace t)
  '(js2-enter-indents-newline nil)
  '(js2-indent-on-enter-key nil)
  '(js2-rebind-eol-bol-keys nil)
+ '(js2-strict-trailing-comma-warning t)
  '(large-file-warning-threshold nil)
- '(markdown-command "open -a Marked")
+ '(markdown-command "open -a \"Marked 2\"")
  '(markdown-command-needs-filename t))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
