@@ -15,6 +15,7 @@
     flymake
     git-gutter-fringe
     helm
+    helm-swoop
     helm-git-files
     sublime-themes
     multiple-cursors
@@ -44,6 +45,15 @@
     jsx-mode
     quickrun
     python-mode
+    terraform-mode
+    slime
+    ac-slime
+    yasnippet
+    scala-mode2
+    ensime
+    dired-subtree
+    flycheck-protobuf
+    protobuf-mode
     ;; moccur-edit ;; site-lispに置いてある、自動でとりたい
     ))
 

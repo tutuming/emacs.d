@@ -28,14 +28,21 @@
 (add-to-list 'load-path "~/go-packages/src/github.com/golang/lint/misc/emacs")
 (require 'golint)
 
-// (load "~/go-packages/src/golang.org/x/tools/cmd/oracle/oracle.el")
-// (add-hook 'go-mode-hook 'go-oracle-mode)
-
-(add-to-list 'load-path "~/go-packages/src/github.com/dougm/goflymake")
+;; (load "~/go-packages/src/golang.org/x/tools/cmd/oracle/oracle.el")
+                                                                                                                                 (add-to-list 'load-path "~/go-packages/src/github.com/dougm/goflymake")
 (require 'go-flycheck)
-(add-to-list 'flycheck-checkers 'go-vet)
+(add-to-list 'flycheck-checkers 'go-golint)
 
 ;; err ハイライト
 (font-lock-add-keywords
  'go-mode
  '(("\\b\\(err\\)\\b" 1 '((:foreground "LightSalmon2") (:weight bold)) t)))
+
+(require 'go-rename)
+
+(add-hook 'go-mode-hook
+          (lambda () (local-set-key (kbd "C-c C-/") 'go-rename)))
+
+(custom-set-variables
+ '(ac-go-expand-arguments-into-snippets nil) ; auto-complete
+ '(company-go-insert-arguments nil))         ; company-mode

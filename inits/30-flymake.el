@@ -1,2 +1,2 @@
 ;; flymake
-(require 'flymake-cursor)
+;(require 'flymake-cursor)

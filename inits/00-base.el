@@ -23,6 +23,12 @@
 ;; 自動再読み込み
 (global-auto-revert-mode 1)
 
+;; kill-ring の最大数
+(setq kill-ring-max 200)
+
+;; C-k で行末の改行も消去
+(setq kill-whole-line t)
+
 ;; 行末のwhitespaceを削除 ( ただし、マークダウンには適用しない
 (setq delete-trailing-whitespace-exclude-patterns (list "\\.md$" "\\.markdown$"))
 
