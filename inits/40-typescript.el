@@ -1,15 +1,29 @@
 (require 'typescript)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 
-(require 'tss)
+(require 'tide)
 
-;; Key binding
-(setq tss-popup-help-key "C-:")
-(setq tss-jump-to-definition-key "C-j")
-(setq tss-implement-definition-key "C-c i")
+;; sample config
+(add-hook 'typescript-mode-hook
+          (lambda ()
+            (tide-setup)
+            (flycheck-mode +1)
+            (setq flycheck-check-syntax-automatically '(save mode-enabled))
+            (eldoc-mode +1)
+            (company-mode-on)))
 
-;; Make config suit for you. About the config item, eval the following sexp.
-(customize-group "tss")
+;; Tide can be used along with web-mode to edit tsx files
+(require 'web-mode)
 
-;; Do setting recommemded configuration
-(tss-config-default)
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (string-equal "tsx" (file-name-extension buffer-file-name))
+              (tide-setup)
+              (flycheck-mode +1)
+              (setq flycheck-check-syntax-automatically '(save mode-enabled))
+              (eldoc-mode +1)
+              (company-mode-on))))
+
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)

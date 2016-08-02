@@ -43,6 +43,9 @@
     thrift
     js2-mode
     jsx-mode
+    typescript-mode
+    tide
+    web-mode
     quickrun
     python-mode
     terraform-mode
@@ -54,6 +57,7 @@
     dired-subtree
     flycheck-protobuf
     protobuf-mode
+    dockerfile-mode
     ;; moccur-edit ;; site-lispに置いてある、自動でとりたい
     ))
 
