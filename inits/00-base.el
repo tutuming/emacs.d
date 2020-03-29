@@ -55,7 +55,7 @@
 (add-hook 'before-save-hook 'my-delete-trailing-blank-lines)
 
 ;; 初期表示
-(setq inhibit-startup-message t)
+(setq initial-buffer-choice t)
 
 ;; C-h はバックスペース
 (global-set-key "\C-h" 'delete-backward-char)

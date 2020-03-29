@@ -1,5 +1,6 @@
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
@@ -10,9 +11,8 @@
   '(
     ;; ここに使っているパッケージを書く。
     magit
-    smartrep
-    auto-complete
-    flymake
+    bind-key
+    company
     git-gutter-fringe
     helm
     helm-swoop
@@ -28,7 +28,7 @@
     flymake-coffee
     flycheck
     flycheck-pos-tip
-    coffee-mode
+    flycheck-protobuf
     json-mode
     log4e
     yaxception
@@ -38,9 +38,10 @@
     go-autocomplete
     go-eldoc
     go-errcheck
+    go-guru
+    golint
     motion-mode
     markdown-mode
-    thrift
     js2-mode
     jsx-mode
     typescript-mode
@@ -50,15 +51,16 @@
     python-mode
     terraform-mode
     slime
-    ac-slime
     yasnippet
-    scala-mode2
-    ensime
     dired-subtree
-    flycheck-protobuf
     protobuf-mode
     dockerfile-mode
-    ;; moccur-edit ;; site-lispに置いてある、自動でとりたい
+    vue-mode
+    add-node-modules-path
+    js-auto-format-mode
+    dart-mode
+    lsp-mode
+    moccur-edit
     ))
 
 (let ((not-installed (loop for x in installing-package-list
